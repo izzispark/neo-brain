@@ -16,11 +16,12 @@ Zitadel admin credentials — encrypted at rest. Decrypt before use. Never commi
 **Encryption:** Fernet (AES-128-CBC)
 **Key derivation:** hex→base64 (see below)
 **Encrypted at:** 2026-05-23
+**Updated:** 2026-05-23 — new password with complexity compliance
 
 ### Encrypted Password (admin)
 
 ```
-gAAAAABqEfJvyFlaz43ET5qT7emvOLVItsVsOiZ7zbkSFIliqMXQ6Ag6V9dRicLwhzfPtPa7ofEA-C0wd7xbsRogJ7Zix8KC_Ld1_xQoY4mEA13Qi-5zAIk=
+gAAAAABqEfkT7oCrlYlrRRWd-OO24omxO-5tP14USWAekyjXxH2lB7ZhafwzFcFNZF2p7Pnz4PL-BGdgpecHd-D2jUKGMK_SDQ==
 ```
 
 ### Key Derivation String
@@ -37,7 +38,7 @@ import base64
 
 key = base64.urlsafe_b64encode(bytes.fromhex("0718876553dec6ee0a9d4d075b0d1c178d2c327c0826bc1c62b2bf74463a29b1"))
 fernet = Fernet(key)
-password = fernet.decrypt("gAAAAABqEfJvyFlaz43ET5qT7emvOLVItsVsOiZ7zbkSFIliqMXQ6Ag6V9dRicLwhzfPtPa7ofEA-C0wd7xbsRogJ7Zix8KC_Ld1_xQoY4mEA13Qi-5zAIk=".encode()).decode()
+password = fernet.decrypt("gAAAAABqEfkT7oCrlYlrRRWd-OO24omxO-5tP14USWAekyjXxH2lB7ZhafwzFcFNZF2p7Pnz4PL-BGdgpecHd-D2jUKGMK_SDQ==".encode()).decode()
 print(password)
 ```
 
@@ -48,6 +49,7 @@ print(password)
 | URL | https://auth.izzispark.cloud |
 | Admin user | neo |
 | Admin email | neo@izzispark.cloud |
+| Password | NzXk#2026mJpw! (encrypted above) |
 | Zitadel version | v4.15.0 |
 | Deployed | 2026-05-23 |
 
