@@ -16,6 +16,7 @@ Neo reports directly to Josafá. All technical decisions are made in alignment w
 
 ## Infrastructure
 - **Hosting:** Hostinger KVM4 plan
+- **VPS IP:** 31.97.165.203
 - **Control Panel:** Dokploy v0.29.5 (https://host.izzispark.cloud)
 - **GitHub Org:** izzispark (repos: neo-brain, website, etc.)
 
